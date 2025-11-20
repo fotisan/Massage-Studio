@@ -1,457 +1,768 @@
-<!doctype html>
-<html lang="el">
-<head>
-  <meta charset="utf-8">
-  <title>Therapeutic & Sports Massage Studio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Θεραπευτικό, sports και χαλαρωτικό μασάζ με κλινική προσέγγιση, εμπνευσμένο από τα σύγχρονα standards των ΗΠΑ.">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header class="site-header">
-    <div class="shell site-header__inner">
-      <a href="#top" class="logo">
-        <span class="logo__mark"></span>
-        <span class="logo__text">TheraMassage Studio</span>
-      </a>
+:root{
+  --page-bg:#f4eee6;
+  --page-bg-soft:#f8f3ec;
+  --page-fg:#1f2933;
+  --muted:#6b7280;
+  --border:#e3d9cc;
+  --surface:#ffffff;
+  --surface-soft:#fdf8f1;
+  --brand:#116a5b;        /* deep healing green */
+  --brand-soft:#d7f3eb;
+  --accent:#d97757;       /* clay / terracotta */
+  --danger:#ef4444;
+  --radius-lg:26px;
+  --radius-md:18px;
+  --radius-sm:12px;
+  --shadow-soft:0 22px 45px rgba(15,23,42,0.10);
+  --container:1120px;
+  --nav-h:72px;
+}
 
-      <nav class="nav">
-        <ul class="nav__list">
-          <li><a href="#services">Υπηρεσίες</a></li>
-          <li><a href="#why">Γιατί εμάς</a></li>
-          <li><a href="#pricing">Τιμές</a></li>
-          <li><a href="#about">Σχετικά</a></li>
-        </ul>
-      </nav>
+*,
+*::before,
+*::after{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
 
-      <a href="#booking" class="btn btn--nav">Κλείσε Ραντεβού</a>
-    </div>
-  </header>
+html{
+  scroll-behavior:smooth;
+}
 
-  <main id="top">
-    <!-- HERO -->
-    <section class="hero">
-      <div class="shell hero__inner">
-        <div class="hero__content">
-          <p class="eyebrow">Therapeutic • Sports • Relax Massage</p>
-          <h1 class="hero__title">
-            Θεραπευτικό &amp; Sports Massage Studio
-          </h1>
-          <p class="hero__subtitle">
-            Αποκατάσταση, χαλάρωση και βαθιά θεραπεία — με προσέγγιση που
-            ακολουθεί τα σύγχρονα standards των ΗΠΑ.
-          </p>
+body{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+  background:
+    radial-gradient(circle at top,#f8efe5 0,#f4eee6 40%,#e6ddd0 100%);
+  color:var(--page-fg);
+  -webkit-font-smoothing:antialiased;
+}
 
-          <ul class="hero__bullets">
-            <li>Εστίαση σε αυχενικό, μέση, ώμους &amp; πιάσιμο από καθιστική ζωή</li>
-            <li>Sports &amp; deep tissue μασάζ για αθλητές και gym-goers</li>
-            <li>Καθαρός, minimal χώρος με κλινική–wellness αισθητική</li>
-          </ul>
+img{
+  max-width:100%;
+  display:block;
+}
 
-          <div class="hero__actions">
-            <a href="#booking" class="btn btn--primary">Κλείσε Ραντεβού</a>
-            <a href="#services" class="btn btn--ghost">Δες τις Υπηρεσίες</a>
-          </div>
+a{
+  color:inherit;
+  text-decoration:none;
+}
 
-          <p class="hero__note">
-            * Ιδανικό για επαγγελματίες, αθλητές &amp; όσους νιώθουν χρόνια ένταση.
-          </p>
-        </div>
+ul{
+  list-style:none;
+}
 
-        <div class="hero__media">
-          <div class="image-frame image-frame--hero">
-            <span class="image-frame__label">Πλαίσιο φωτογραφίας studio</span>
-          </div>
-        </div>
-      </div>
-    </section>
+/* Layout utilities */
 
-    <!-- SERVICES -->
-    <section class="section" id="services">
-      <div class="shell">
-        <header class="section__head">
-          <h2 class="section__title">Οι Υπηρεσίες μας</h2>
-          <p class="section__subtitle">
-            Επιλογές σχεδιασμένες για πραγματική ανακούφιση, αποκατάσταση και χαλάρωση.
-          </p>
-        </header>
+.shell{
+  max-width:var(--container);
+  margin:0 auto;
+  padding:0 1.4rem;
+}
 
-        <div class="grid grid--services">
-          <article class="card service-card">
-            <div class="image-frame image-frame--service">
-              <span class="image-frame__label">Πλαίσιο Therapeutic Massage</span>
-            </div>
-            <h3 class="service-card__title">Therapeutic Massage</h3>
-            <p class="service-card__text">
-              Ανακούφιση από ένταση, πιασίματα και χρόνιους μυϊκούς πόνους
-              με στοχευμένες πιέσεις και τεχνικές.
-            </p>
-            <ul class="service-card__list">
-              <li>Αυχενικό &amp; πόνος μέσης</li>
-              <li>Χρόνια ένταση από καθιστική εργασία</li>
-              <li>Στοχευμένες πιέσεις &amp; trigger points</li>
-            </ul>
-          </article>
+.section{
+  padding:3.75rem 0;
+}
 
-          <article class="card service-card">
-            <div class="image-frame image-frame--service">
-              <span class="image-frame__label">Πλαίσιο Sports &amp; Deep Tissue</span>
-            </div>
-            <h3 class="service-card__title">Sports &amp; Deep Tissue</h3>
-            <p class="service-card__text">
-              Ιδανικό για αθλητές, όσους γυμνάζονται έντονα και χρειάζονται
-              αποκατάσταση &amp; βελτίωση απόδοσης.
-            </p>
-            <ul class="service-card__list">
-              <li>Προπόνηση &amp; αποκατάσταση</li>
-              <li>Deep tissue τεχνικές</li>
-              <li>Βελτίωση κινητικότητας</li>
-            </ul>
-          </article>
+.section--soft{
+  background:var(--page-bg-soft);
+}
 
-          <article class="card service-card">
-            <div class="image-frame image-frame--service">
-              <span class="image-frame__label">Πλαίσιο Relax &amp; Stress Relief</span>
-            </div>
-            <h3 class="service-card__title">Relax &amp; Stress Relief</h3>
-            <p class="service-card__text">
-              Ήπιο, απολαυστικό μασάζ για τόνωση, ισορροπία και αποφόρτιση
-              από την καθημερινότητα.
-            </p>
-            <ul class="service-card__list">
-              <li>Χαλάρωση νευρικού συστήματος</li>
-              <li>Ήπιες, ρευστές κινήσεις</li>
-              <li>Συνδυασμός με ελληνικό/μεσογειακό wellness vibe</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
+.section--highlight{
+  background:linear-gradient(135deg,#116a5b,#1a8570);
+  color:#e9fbf6;
+}
 
-    <!-- WHY US -->
-    <section class="section section--soft" id="why">
-      <div class="shell">
-        <header class="section__head">
-          <h2 class="section__title">Γιατί να μας επιλέξεις;</h2>
-          <p class="section__subtitle">
-            Clinical–wellness προσέγγιση, όχι απλά "ένα μασάζ χαλάρωσης".
-          </p>
-        </header>
+.section__head{
+  text-align:center;
+  margin-bottom:2.5rem;
+}
 
-        <div class="grid grid--why">
-          <article class="card why-card">
-            <h3 class="why-card__title">Πιστοποιημένη εκπαίδευση</h3>
-            <p class="why-card__text">
-              Πιστοποιημένος/η Massage Therapist με εξειδίκευση σε therapeutic,
-              sports &amp; deep tissue τεχνικές.
-            </p>
-          </article>
+.section__head--left{
+  text-align:left;
+}
 
-          <article class="card why-card">
-            <h3 class="why-card__title">Κλινική–wellness αισθητική</h3>
-            <p class="why-card__text">
-              Καθαρός, minimal χώρος με έμφαση στην ηρεμία, την υγιεινή
-              και την αίσθηση "σύγχρονου studio", όχι spa.
-            </p>
-          </article>
+.section__title{
+  font-size:1.75rem;
+  font-weight:650;
+  letter-spacing:-0.03em;
+  margin-bottom:0.45rem;
+}
 
-          <article class="card why-card">
-            <h3 class="why-card__title">Εστίαση στα αποτελέσματα</h3>
-            <p class="why-card__text">
-              Στόχος μας είναι να νιώσεις διαφορά από την πρώτη συνεδρία,
-              ειδικά σε αυχενικό, μέση &amp; ώμους.
-            </p>
-          </article>
+.section__subtitle{
+  font-size:0.96rem;
+  color:var(--muted);
+}
 
-          <article class="card why-card">
-            <h3 class="why-card__title">Διαφάνεια &amp; επαγγελματισμός</h3>
-            <p class="why-card__text">
-              Σαφείς τιμές, ξεκάθαρη διαδικασία, χωρίς κρυφές χρεώσεις
-              ή υπερβολικές υποσχέσεις.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
+/* Header */
 
-    <!-- EXPERIENCE -->
-    <section class="section" id="experience">
-      <div class="shell experience">
-        <div class="experience__content">
-          <header class="section__head section__head--left">
-            <h2 class="section__title">Η εμπειρία στο studio</h2>
-            <p class="section__subtitle">
-              Κάθε συνεδρία σχεδιάζεται γύρω από το δικό σου σώμα
-              και τις ανάγκες σου.
-            </p>
-          </header>
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:40;
+  backdrop-filter:blur(20px);
+  background:rgba(244,238,230,0.92);
+  border-bottom:1px solid rgba(214,205,191,0.9);
+}
 
-          <ul class="experience__list">
-            <li>
-              <strong>Εξατομικευμένη αξιολόγηση</strong> πριν την συνεδρία,
-              με ερωτήσεις για ένταση, πόνο &amp; καθημερινότητα.
-            </li>
-            <li>
-              <strong>Στοχευμένες τεχνικές</strong> ανάλογα με το πρόβλημα
-              (trigger points, deep tissue, mobilization).
-            </li>
-            <li>
-              <strong>Άμεση αίσθηση ανακούφισης</strong> και καθαρή ενέργεια,
-              χωρίς βαριά αίσθηση ή "μούδιασμα".
-            </li>
-          </ul>
-        </div>
+.site-header__inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  height:var(--nav-h);
+  gap:1rem;
+}
 
-        <div class="experience__media">
-          <div class="image-frame image-frame--tall">
-            <span class="image-frame__label">Πλαίσιο φωτογραφίας εμπειρίας</span>
-          </div>
-        </div>
-      </div>
-    </section>
+.logo{
+  display:flex;
+  align-items:center;
+  gap:0.6rem;
+  font-weight:650;
+  letter-spacing:-0.04em;
+  font-size:0.98rem;
+}
 
-    <!-- PRICING -->
-    <section class="section section--soft" id="pricing">
-      <div class="shell">
-        <header class="section__head">
-          <h2 class="section__title">Τιμές Συνεδριών</h2>
-          <p class="section__subtitle">
-            Ξεκάθαρες τιμές, χωρίς κρυφές χρεώσεις.
-          </p>
-        </header>
+.logo__mark{
+  width:30px;
+  height:30px;
+  border-radius:18px;
+  background:
+    radial-gradient(circle at 30% 20%,#facc6b 0,#facc6b 26%,transparent 27%),
+    linear-gradient(135deg,#116a5b,#1fb58e);
+  box-shadow:
+    0 0 0 4px rgba(24,160,122,0.18),
+    0 16px 30px rgba(15,23,42,0.25);
+}
 
-        <div class="grid grid--pricing">
-          <article class="card pricing-card">
-            <h3 class="pricing-card__title">Therapeutic Massage</h3>
-            <ul class="pricing-card__list">
-              <li>
-                <span>30'</span>
-                <strong>$60</strong>
-              </li>
-              <li>
-                <span>60'</span>
-                <strong>$95</strong>
-              </li>
-              <li>
-                <span>90'</span>
-                <strong>$140</strong>
-              </li>
-            </ul>
-            <p class="pricing-card__note">
-              Ιδανικό για αυχενικό, μέση &amp; χρόνιο πιάσιμο.
-            </p>
-          </article>
+.logo__text{
+  white-space:nowrap;
+}
 
-          <article class="card pricing-card">
-            <h3 class="pricing-card__title">Sports &amp; Deep Tissue</h3>
-            <ul class="pricing-card__list">
-              <li>
-                <span>60'</span>
-                <strong>$110</strong>
-              </li>
-              <li>
-                <span>90'</span>
-                <strong>$155</strong>
-              </li>
-            </ul>
-            <p class="pricing-card__note">
-              Για αθλητές &amp; όσους γυμνάζονται έντονα.
-            </p>
-          </article>
+.nav{
+  display:none;
+}
 
-          <article class="card pricing-card">
-            <h3 class="pricing-card__title">Relax &amp; Stress Relief</h3>
-            <ul class="pricing-card__list">
-              <li>
-                <span>60'</span>
-                <strong>$90</strong>
-              </li>
-              <li>
-                <span>90'</span>
-                <strong>$135</strong>
-              </li>
-            </ul>
-            <p class="pricing-card__note">
-              Για βαθιά χαλάρωση, ισορροπία &amp; καλύτερο ύπνο.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
+.nav__list{
+  display:flex;
+  align-items:center;
+  gap:1.6rem;
+  font-size:0.9rem;
+  color:var(--muted);
+}
 
-    <!-- PROCESS -->
-    <section class="section" id="process">
-      <div class="shell">
-        <header class="section__head">
-          <h2 class="section__title">Πώς λειτουργεί</h2>
-          <p class="section__subtitle">
-            Απλή διαδικασία, σχεδιασμένη για busy ανθρώπους.
-          </p>
-        </header>
+.nav__list a{
+  position:relative;
+  padding-bottom:0.1rem;
+}
 
-        <ol class="steps">
-          <li class="steps__item">
-            <div class="steps__badge">1</div>
-            <div class="steps__body">
-              <h3 class="steps__title">Online κράτηση</h3>
-              <p class="steps__text">
-                Επιλέγεις ημέρα, ώρα &amp; τύπο συνεδρίας που σου ταιριάζει.
-              </p>
-            </div>
-          </li>
-          <li class="steps__item">
-            <div class="steps__badge">2</div>
-            <div class="steps__body">
-              <h3 class="steps__title">Σύντομη αξιολόγηση</h3>
-              <p class="steps__text">
-                Συζητάμε τον πόνο, την ένταση και το πώς κινείσαι καθημερινά.
-              </p>
-            </div>
-          </li>
-          <li class="steps__item">
-            <div class="steps__badge">3</div>
-            <div class="steps__body">
-              <h3 class="steps__title">Θεραπευτική συνεδρία</h3>
-              <p class="steps__text">
-                Στοχευμένο therapeutic ή sports μασάζ, με έμφαση στο αποτέλεσμα.
-              </p>
-            </div>
-          </li>
-        </ol>
-      </div>
-    </section>
+.nav__list a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-0.15rem;
+  width:0;
+  height:2px;
+  border-radius:999px;
+  background:var(--accent);
+  transition:width 0.18s ease-out;
+}
 
-    <!-- ABOUT -->
-    <section class="section section--soft" id="about">
-      <div class="shell about">
-        <div class="about__media">
-          <div class="image-frame image-frame--portrait">
-            <span class="image-frame__label">Πλαίσιο φωτογραφίας θεραπευτή</span>
-          </div>
-        </div>
+.nav__list a:hover::after{
+  width:100%;
+}
 
-        <div class="about__content">
-          <header class="section__head section__head--left">
-            <h2 class="section__title">Σχετικά με εμένα</h2>
-          </header>
-          <p class="about__text">
-            Είμαι πιστοποιημένος/η Massage Therapist με ειδίκευση στο
-            Therapeutic &amp; Sports Massage. Έχω εκπαιδευτεί σε σύγχρονες
-            τεχνικές αποκατάστασης, deep tissue, trigger points και
-            κινητικότητα, με έμπνευση από κλινικά πρότυπα των ΗΠΑ.
-          </p>
-          <p class="about__text">
-            Κάθε συνεδρία είναι εξατομικευμένη, με στόχο να λύσουμε την
-            πραγματική αιτία του πόνου και όχι απλώς να "χαλαρώσουμε"
-            προσωρινά τους μυς.
-          </p>
-          <p class="about__text">
-            Αν αναζητάς επαγγελματισμό, διαφάνεια και ένα studio που σέβεται
-            τον χρόνο &amp; το σώμα σου, θα χαρώ να σε δω από κοντά.
-          </p>
-        </div>
-      </div>
-    </section>
+/* Buttons */
 
-    <!-- REVIEWS -->
-    <section class="section" id="reviews">
-      <div class="shell">
-        <header class="section__head">
-          <h2 class="section__title">Τι λένε οι πελάτες μας</h2>
-          <p class="section__subtitle">
-            Αληθινά σχόλια από ανθρώπους που εμπιστεύτηκαν το σώμα τους στο studio.
-          </p>
-        </header>
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:999px;
+  padding:0.6rem 1.5rem;
+  font-size:0.9rem;
+  font-weight:560;
+  border:1px solid transparent;
+  cursor:pointer;
+  gap:0.35rem;
+  transition:
+    background 0.18s ease,
+    color 0.18s ease,
+    box-shadow 0.18s ease,
+    transform 0.12s ease;
+}
 
-        <div class="grid grid--reviews">
-          <article class="card review-card">
-            <p class="review-card__text">
-              “Φεύγω κάθε φορά χωρίς πόνο στη μέση. Σωστές πιέσεις, σωστή τεχνική,
-              χωρίς υπερβολές.”
-            </p>
-            <p class="review-card__author">— Ελένη Μ.</p>
-          </article>
+.btn--primary{
+  background:linear-gradient(135deg,#116a5b,#1fb58e);
+  color:#fdfcfb;
+  box-shadow:0 18px 40px rgba(17,106,91,0.45);
+}
 
-          <article class="card review-card">
-            <p class="review-card__text">
-              “Το καλύτερο deep tissue που έχω κάνει, ειδικά μετά το γυμναστήριο.
-              Νιώθω ότι πραγματικά βοηθάει στην απόδοσή μου.”
-            </p>
-            <p class="review-card__author">— Νίκος Π.</p>
-          </article>
+.btn--primary:hover{
+  transform:translateY(-1px);
+  box-shadow:0 22px 55px rgba(17,106,91,0.55);
+}
 
-          <article class="card review-card">
-            <p class="review-card__text">
-              “Επαγγελματισμός, καθαρός χώρος και ήρεμη ενέργεια. Συστήνω 100%.”
-            </p>
-            <p class="review-card__author">— Άννα Κ.</p>
-          </article>
-        </div>
-      </div>
-    </section>
+.btn--ghost{
+  background:rgba(255,255,255,0.85);
+  border-color:rgba(214,205,191,0.9);
+  color:var(--page-fg);
+}
 
-    <!-- BOOKING / CONTACT -->
-    <section class="section section--highlight" id="booking">
-      <div class="shell booking">
-        <div class="booking__content">
-          <h2 class="section__title">Έτοιμος/η να νιώσεις καλύτερα;</h2>
-          <p class="section__subtitle">
-            Συμπλήρωσε τη φόρμα ή στείλε μήνυμα για να κλείσουμε την επόμενη διαθέσιμη ώρα.
-          </p>
-        </div>
+.btn--ghost:hover{
+  background:#fff;
+  box-shadow:0 10px 25px rgba(15,23,42,0.08);
+}
 
-        <form class="booking__form">
-          <div class="form-grid">
-            <div class="form-group">
-              <label for="name">Όνομα</label>
-              <input id="name" type="text" placeholder="Πώς σε λένε;">
-            </div>
+.btn--nav{
+  display:none;
+  background:var(--page-fg);
+  color:#fdfcfb;
+  padding-inline:1.25rem;
+}
 
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input id="email" type="email" placeholder="you@example.com">
-            </div>
+.btn--full{
+  width:100%;
+}
 
-            <div class="form-group">
-              <label for="service">Τύπος συνεδρίας</label>
-              <select id="service">
-                <option>Therapeutic Massage</option>
-                <option>Sports &amp; Deep Tissue</option>
-                <option>Relax &amp; Stress Relief</option>
-                <option>Δεν είμαι σίγουρος/η — προτείνετέ μου</option>
-              </select>
-            </div>
+/* HERO */
 
-            <div class="form-group">
-              <label for="message">Μήνυμα</label>
-              <textarea id="message" rows="3" placeholder="Πες μας λίγα λόγια για τον πόνο ή την ένταση που νιώθεις."></textarea>
-            </div>
-          </div>
+.hero{
+  padding:4.1rem 0 3.4rem;
+}
 
-          <button type="submit" class="btn btn--primary btn--full">
-            Στείλε αίτημα για ραντεβού
-          </button>
-        </form>
-      </div>
-    </section>
-  </main>
+.hero__inner{
+  display:flex;
+  flex-direction:column;
+  gap:2.4rem;
+}
 
-  <footer class="site-footer">
-    <div class="shell site-footer__inner">
-      <p class="site-footer__copy">
-        © <span id="year">2025</span> TheraMassage Studio. Όλα τα δικαιώματα διατηρούνται.
-      </p>
-      <a href="#top" class="back-to-top">Πίσω στην κορυφή ↑</a>
-    </div>
-  </footer>
+.hero__content{
+  max-width:32rem;
+  position:relative;
+}
 
-  <script>
-    // απλά για το έτος στο footer
-    const yearEl = document.getElementById('year');
-    if (yearEl) {
-      yearEl.textContent = new Date().getFullYear();
-    }
-  </script>
-</body>
-</html>
+.eyebrow{
+  font-size:0.78rem;
+  text-transform:uppercase;
+  letter-spacing:0.18em;
+  font-weight:600;
+  color:var(--brand);
+  margin-bottom:0.75rem;
+}
 
+.hero__title{
+  font-size:2.25rem;
+  line-height:1.05;
+  letter-spacing:-0.05em;
+  margin-bottom:0.85rem;
+}
+
+.hero__subtitle{
+  font-size:0.99rem;
+  color:#4b5563;
+  margin-bottom:1.3rem;
+}
+
+.hero__bullets{
+  display:flex;
+  flex-direction:column;
+  gap:0.45rem;
+  font-size:0.9rem;
+  color:#1f2933;
+  margin-bottom:1.5rem;
+}
+
+.hero__bullets li{
+  padding-left:1.25rem;
+  position:relative;
+}
+
+.hero__bullets li::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0.48rem;
+  width:8px;
+  height:8px;
+  border-radius:999px;
+  background:radial-gradient(circle at 30% 20%,#facc6b 0,#fbbf24 45%,#d97757 100%);
+}
+
+.hero__actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:0.7rem;
+  margin-bottom:0.8rem;
+}
+
+.hero__note{
+  font-size:0.8rem;
+  color:var(--muted);
+}
+
+.hero__media{
+  flex:1;
+}
+
+/* IMAGE FRAMES */
+
+.image-frame{
+  width:100%;
+  position:relative;
+  border-radius:32px;
+  border:1px solid rgba(214,205,191,0.95);
+  background:linear-gradient(135deg,#fdf8f1,#f3e4d2);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  box-shadow:0 24px 55px rgba(15,23,42,0.18);
+}
+
+.image-frame::before{
+  content:"";
+  position:absolute;
+  inset:12%;
+  border-radius:26px;
+  border:1px dashed rgba(214,181,154,0.9);
+  pointer-events:none;
+}
+
+.image-frame__label{
+  position:relative;
+  font-size:0.8rem;
+  color:#6b5b4b;
+  padding:0.45rem 0.9rem;
+  border-radius:999px;
+  background:rgba(253,250,246,0.96);
+  box-shadow:0 10px 25px rgba(148,114,89,0.22);
+}
+
+.image-frame--hero{
+  min-height:240px;
+}
+
+.image-frame--service{
+  padding-top:66%;
+}
+
+.image-frame--tall{
+  padding-top:136%;
+}
+
+.image-frame--portrait{
+  padding-top:124%;
+}
+
+/* Sections – grids & cards */
+
+.grid{
+  display:grid;
+  gap:1.5rem;
+}
+
+.grid--services{
+  grid-template-columns:1fr;
+}
+
+.card{
+  background:var(--surface);
+  border-radius:var(--radius-lg);
+  box-shadow:0 20px 45px rgba(15,23,42,0.10);
+  padding:1.4rem 1.4rem 1.6rem;
+  border:1px solid rgba(214,205,191,0.9);
+}
+
+.service-card__title{
+  font-size:1.06rem;
+  font-weight:620;
+  margin:1.05rem 0 0.45rem;
+}
+
+.service-card__text{
+  font-size:0.9rem;
+  color:var(--muted);
+  margin-bottom:0.8rem;
+}
+
+.service-card__list{
+  font-size:0.85rem;
+  display:flex;
+  flex-direction:column;
+  gap:0.3rem;
+}
+
+.service-card__list li{
+  padding-left:0.9rem;
+  position:relative;
+}
+
+.service-card__list li::before{
+  content:"–";
+  position:absolute;
+  left:0;
+  color:var(--accent);
+}
+
+/* WHY */
+
+.grid--why{
+  grid-template-columns:1fr;
+}
+
+.why-card__title{
+  font-size:0.98rem;
+  font-weight:610;
+  margin-bottom:0.3rem;
+  color:#1f2933;
+}
+
+.why-card__text{
+  font-size:0.9rem;
+  color:var(--muted);
+}
+
+/* EXPERIENCE */
+
+.experience{
+  display:flex;
+  flex-direction:column;
+  gap:2rem;
+}
+
+.experience__list{
+  font-size:0.9rem;
+  display:flex;
+  flex-direction:column;
+  gap:0.9rem;
+  color:#1f2933;
+  margin-top:1.2rem;
+}
+
+.experience__list strong{
+  font-weight:620;
+}
+
+/* PRICING */
+
+.grid--pricing{
+  grid-template-columns:1fr;
+}
+
+.pricing-card__title{
+  font-size:1.02rem;
+  font-weight:620;
+  margin-bottom:1rem;
+}
+
+.pricing-card__list{
+  font-size:0.9rem;
+  display:flex;
+  flex-direction:column;
+  gap:0.55rem;
+  margin-bottom:0.8rem;
+}
+
+.pricing-card__list li{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.pricing-card__list span{
+  color:var(--muted);
+}
+
+.pricing-card__list strong{
+  font-weight:670;
+  color:#1f2933;
+}
+
+.pricing-card__note{
+  font-size:0.83rem;
+  color:var(--muted);
+}
+
+/* PROCESS */
+
+.steps{
+  list-style:none;
+  display:flex;
+  flex-direction:column;
+  gap:1.1rem;
+}
+
+.steps__item{
+  display:flex;
+  align-items:flex-start;
+  gap:0.8rem;
+}
+
+.steps__badge{
+  width:32px;
+  height:32px;
+  border-radius:999px;
+  background:var(--brand-soft);
+  color:var(--brand);
+  font-weight:650;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+  box-shadow:0 10px 25px rgba(24,160,122,0.35);
+}
+
+.steps__title{
+  font-size:0.96rem;
+  font-weight:600;
+  margin-bottom:0.25rem;
+}
+
+.steps__text{
+  font-size:0.88rem;
+  color:var(--muted);
+}
+
+/* ABOUT */
+
+.about{
+  display:flex;
+  flex-direction:column;
+  gap:2rem;
+}
+
+.about__text{
+  font-size:0.9rem;
+  color:#1f2933;
+  margin-bottom:0.7rem;
+}
+
+/* REVIEWS */
+
+.grid--reviews{
+  grid-template-columns:1fr;
+}
+
+.review-card__text{
+  font-size:0.9rem;
+  color:#1f2933;
+  margin-bottom:0.65rem;
+}
+
+.review-card__author{
+  font-size:0.82rem;
+  color:var(--muted);
+}
+
+/* BOOKING */
+
+.booking{
+  display:flex;
+  flex-direction:column;
+  gap:2rem;
+}
+
+.booking .section__subtitle{
+  color:#d7f3eb;
+}
+
+.booking__form{
+  background:rgba(3,16,12,0.28);
+  border-radius:var(--radius-lg);
+  padding:1.4rem 1.3rem 1.6rem;
+  border:1px solid rgba(15,52,44,0.65);
+  box-shadow:0 20px 55px rgba(3,15,11,0.65);
+}
+
+.form-grid{
+  display:grid;
+  gap:1rem;
+  margin-bottom:1.1rem;
+}
+
+.form-group{
+  display:flex;
+  flex-direction:column;
+  gap:0.4rem;
+}
+
+.form-group label{
+  font-size:0.84rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+  border-radius:var(--radius-md);
+  border:1px solid rgba(148,163,184,0.9);
+  padding:0.55rem 0.75rem;
+  font-size:0.9rem;
+  font-family:inherit;
+  outline:none;
+  background:rgba(15,23,42,0.16);
+  color:#e9fbf6;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder{
+  color:rgba(203,213,225,0.95);
+}
+
+.form-group select{
+  background-image:linear-gradient(45deg,transparent 50%,#e5e7eb 50%),
+                    linear-gradient(135deg,#e5e7eb 50%,transparent 50%);
+  background-position:
+    calc(100% - 18px) 16px,
+    calc(100% - 13px) 16px;
+  background-size:5px 5px,5px 5px;
+  background-repeat:no-repeat;
+}
+
+/* FOOTER */
+
+.site-footer{
+  border-top:1px solid rgba(214,205,191,0.9);
+  background:#f7f1ea;
+}
+
+.site-footer__inner{
+  display:flex;
+  flex-direction:column;
+  gap:0.45rem;
+  align-items:flex-start;
+  justify-content:space-between;
+  padding:1rem 0;
+}
+
+.site-footer__copy{
+  font-size:0.8rem;
+  color:var(--muted);
+}
+
+.back-to-top{
+  font-size:0.8rem;
+  color:var(--brand);
+}
+
+/* Scroll anchors */
+
+[id]{
+  scroll-margin-top:calc(var(--nav-h) + 18px);
+}
+
+/* RESPONSIVE */
+
+@media (min-width: 768px){
+  .section{
+    padding:4.6rem 0;
+  }
+
+  .hero{
+    padding:4.8rem 0 4rem;
+  }
+
+  .hero__inner{
+    flex-direction:row;
+    align-items:center;
+    gap:3.2rem;
+  }
+
+  .hero__title{
+    font-size:2.6rem;
+  }
+
+  .hero__media{
+    max-width:380px;
+    margin-left:auto;
+  }
+
+  .grid--services{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+  }
+
+  .grid--why{
+    grid-template-columns:repeat(4,minmax(0,1fr));
+  }
+
+  .experience{
+    flex-direction:row;
+    align-items:stretch;
+  }
+
+  .experience__content{
+    flex:1.25;
+  }
+
+  .experience__media{
+    flex:1;
+    max-width:330px;
+  }
+
+  .grid--pricing{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+  }
+
+  .about{
+    flex-direction:row;
+  }
+
+  .about__media{
+    flex:0 0 270px;
+  }
+
+  .about__content{
+    flex:1;
+  }
+
+  .grid--reviews{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+  }
+
+  .booking{
+    flex-direction:row;
+    align-items:flex-start;
+  }
+
+  .booking__content{
+    flex:0 0 290px;
+  }
+
+  .booking__form{
+    flex:1;
+  }
+
+  .form-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+
+  .form-group:nth-child(4){
+    grid-column:1 / -1;
+  }
+
+  .site-footer__inner{
+    flex-direction:row;
+    align-items:center;
+  }
+
+  .nav{
+    display:block;
+  }
+
+  .btn--nav{
+    display:inline-flex;
+  }
+}
+
+@media (min-width: 1024px){
+  .hero__title{
+    font-size:2.9rem;
+  }
+
+  .hero__subtitle{
+    font-size:1rem;
+  }
+
+  .hero__media{
+    max-width:420px;
+  }
+}
