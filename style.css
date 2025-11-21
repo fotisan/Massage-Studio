@@ -238,7 +238,7 @@ ul{
     url("hero-image-massage.png");
   background-size:cover;
   /* μετακινούμε το “focus” της εικόνας πιο ψηλά */
-  background-position:center 15%;
+  background-position:center 5%;
   background-repeat:no-repeat;
   color:#f9fafb;
 }
@@ -784,4 +784,5 @@ ul{
     font-size:1rem;
   }
 }
+
 
