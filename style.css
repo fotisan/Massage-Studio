@@ -237,7 +237,8 @@ ul{
     linear-gradient(120deg,rgba(15,23,42,0.82),rgba(15,23,42,0.45)),
     url("hero-image-massage.png");
   background-size:cover;
-  background-position:center;
+  /* μετακινούμε το “focus” της εικόνας πιο ψηλά */
+  background-position:center 15%;
   background-repeat:no-repeat;
   color:#f9fafb;
 }
@@ -783,3 +784,4 @@ ul{
     font-size:1rem;
   }
 }
+
