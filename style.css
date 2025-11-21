@@ -785,4 +785,13 @@ ul{
   }
 }
 
+/* και εδώ προσθέτεις το νέο media */
+
+@media (min-width: 1280px){
+  .hero{
+    background-position:center 0%;
+  }
+}
+
+
 
