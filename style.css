@@ -6,9 +6,9 @@
   --border:#e3d9cc;
   --surface:#ffffff;
   --surface-soft:#fdf8f1;
-  --brand:#116a5b;        /* deep healing green */
+  --brand:#116a5b;
   --brand-soft:#d7f3eb;
-  --accent:#d97757;       /* clay / terracotta */
+  --accent:#d97757;
   --danger:#ef4444;
   --radius-lg:26px;
   --radius-md:18px;
@@ -52,7 +52,7 @@ ul{
   list-style:none;
 }
 
-/* Layout utilities */
+/* Layout */
 
 .shell{
   max-width:var(--container);
@@ -224,21 +224,47 @@ ul{
   width:100%;
 }
 
-/* HERO */
+/* HERO B */
 
 .hero{
-  padding:4.1rem 0 3.4rem;
+  position:relative;
+  min-height:calc(100vh - var(--nav-h));
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:3rem 0;
+  background-image:
+    linear-gradient(120deg,rgba(15,23,42,0.68),rgba(15,23,42,0.35)),
+    url("assets/massage-hero-b.jpg"); /* άλλαξε το path αν χρειάζεται */
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  color:#f9fafb;
+}
+
+.hero__overlay{
+  position:absolute;
+  inset:0;
+  background:radial-gradient(circle at 10% 0,rgba(217,119,87,0.45),transparent 55%);
+  pointer-events:none;
 }
 
 .hero__inner{
+  position:relative;
+  z-index:1;
+  width:100%;
   display:flex;
-  flex-direction:column;
-  gap:2.4rem;
+  justify-content:center;
 }
 
-.hero__content{
-  max-width:32rem;
-  position:relative;
+.hero__card{
+  max-width:38rem;
+  background:rgba(15,23,42,0.78);
+  border-radius:28px;
+  padding:2rem 1.6rem 2.1rem;
+  box-shadow:0 28px 60px rgba(3,7,18,0.85);
+  backdrop-filter:blur(18px);
+  border:1px solid rgba(148,163,184,0.55);
 }
 
 .eyebrow{
@@ -246,20 +272,20 @@ ul{
   text-transform:uppercase;
   letter-spacing:0.18em;
   font-weight:600;
-  color:var(--brand);
-  margin-bottom:0.75rem;
+  color:#a5f3fc;
+  margin-bottom:0.8rem;
 }
 
 .hero__title{
-  font-size:2.25rem;
-  line-height:1.05;
+  font-size:2.1rem;
+  line-height:1.1;
   letter-spacing:-0.05em;
-  margin-bottom:0.85rem;
+  margin-bottom:0.75rem;
 }
 
 .hero__subtitle{
-  font-size:0.99rem;
-  color:#4b5563;
+  font-size:0.96rem;
+  color:#e5e7eb;
   margin-bottom:1.3rem;
 }
 
@@ -267,13 +293,13 @@ ul{
   display:flex;
   flex-direction:column;
   gap:0.45rem;
-  font-size:0.9rem;
-  color:#1f2933;
-  margin-bottom:1.5rem;
+  font-size:0.88rem;
+  color:#e5e7eb;
+  margin-bottom:1.4rem;
 }
 
 .hero__bullets li{
-  padding-left:1.25rem;
+  padding-left:1.15rem;
   position:relative;
 }
 
@@ -282,8 +308,8 @@ ul{
   position:absolute;
   left:0;
   top:0.48rem;
-  width:8px;
-  height:8px;
+  width:7px;
+  height:7px;
   border-radius:999px;
   background:radial-gradient(circle at 30% 20%,#facc6b 0,#fbbf24 45%,#d97757 100%);
 }
@@ -295,13 +321,19 @@ ul{
   margin-bottom:0.8rem;
 }
 
-.hero__note{
-  font-size:0.8rem;
-  color:var(--muted);
+.hero__ghost{
+  background:transparent;
+  border-color:rgba(226,232,240,0.7);
+  color:#e5e7eb;
 }
 
-.hero__media{
-  flex:1;
+.hero__ghost:hover{
+  background:rgba(15,23,42,0.9);
+}
+
+.hero__note{
+  font-size:0.8rem;
+  color:#cbd5f5;
 }
 
 /* IMAGE FRAMES */
@@ -338,10 +370,6 @@ ul{
   box-shadow:0 10px 25px rgba(148,114,89,0.22);
 }
 
-.image-frame--hero{
-  min-height:240px;
-}
-
 .image-frame--service{
   padding-top:66%;
 }
@@ -354,7 +382,7 @@ ul{
   padding-top:124%;
 }
 
-/* Sections – grids & cards */
+/* Grids & cards */
 
 .grid{
   display:grid;
@@ -650,7 +678,7 @@ ul{
   scroll-margin-top:calc(var(--nav-h) + 18px);
 }
 
-/* RESPONSIVE */
+/* Responsive */
 
 @media (min-width: 768px){
   .section{
@@ -658,22 +686,15 @@ ul{
   }
 
   .hero{
-    padding:4.8rem 0 4rem;
+    padding:4.2rem 0 4.4rem;
   }
 
-  .hero__inner{
-    flex-direction:row;
-    align-items:center;
-    gap:3.2rem;
+  .hero__card{
+    padding:2.4rem 2.3rem 2.5rem;
   }
 
   .hero__title{
     font-size:2.6rem;
-  }
-
-  .hero__media{
-    max-width:380px;
-    margin-left:auto;
   }
 
   .grid--services{
@@ -760,9 +781,5 @@ ul{
 
   .hero__subtitle{
     font-size:1rem;
-  }
-
-  .hero__media{
-    max-width:420px;
   }
 }
