@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Lúmen Massage Studio | Θεραπευτικό Μασάζ Αθήνα</title>
-  <meta name="description" content="Lúmen Massage Studio στην Αθήνα. Θεραπευτικό, χαλαρωτικό & αθλητικό μασάζ σε ήρεμο, minimal χώρο.">
+  <title>Linea Massage Room | Boutique Μασάζ στην Αθήνα</title>
+  <meta name="description" content="Linea Massage Room · Μικρό boutique studio μασάζ στην Αθήνα. Θεραπευτικό, χαλαρωτικό & αθλητικό μασάζ σε minimal, ήρεμο χώρο.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,10 +15,8 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="#hero" class="logo">
-        <span class="logo-mark">L</span>
-        <span class="logo-text">
-          Lúmen<br><span>Massage Studio</span>
-        </span>
+        <span class="logo-word">Linea</span>
+        <span class="logo-sub">Massage Room</span>
       </a>
 
       <input type="checkbox" id="nav-toggle" class="nav-toggle">
@@ -29,12 +27,11 @@
 
       <nav class="primary-nav">
         <a href="#services">Υπηρεσίες</a>
-        <a href="#about">Σχετικά</a>
-        <a href="#ritual">Η εμπειρία</a>
-        <a href="#gallery">Χώρος</a>
+        <a href="#story">Η ιστορία</a>
+        <a href="#studio">Ο χώρος</a>
         <a href="#pricing">Τιμές</a>
         <a href="#contact">Επικοινωνία</a>
-        <a href="#contact" class="btn btn-sm btn-outline">Κράτηση</a>
+        <a href="#contact" class="btn btn-sm btn-outline">Κλείσε συνεδρία</a>
       </nav>
     </div>
   </header>
@@ -44,65 +41,55 @@
     <section id="hero" class="hero">
       <div class="container hero-inner">
         <div class="hero-copy">
-          <p class="eyebrow">ATHENS · THERAPEUTIC MASSAGE STUDIO</p>
-          <h1>Ήσυχος χώρος, ζεστό φως, ένα σώμα κάθε φορά.</h1>
+          <p class="eyebrow">ATHENS · MASSAGE ROOM</p>
+          <h1>Μια ήσυχη γραμμή ανάμεσα στην ένταση και στην ηρεμία.</h1>
           <p class="hero-subtitle">
-            Στο Lúmen σχεδιάζουμε κάθε συνεδρία σαν μικρό τελετουργικό ηρεμίας,
-            με ήπια κίνηση, αναπνοή και touch που προσαρμόζεται σε εσένα.
+            Το Linea είναι ένα μικρό δωμάτιο μασάζ στο κέντρο της πόλης.
+            Όχι spa, όχι ξενοδοχείο. Ένας χώρος μόνο για σένα, για μία ώρα κάθε φορά.
           </p>
+
           <div class="hero-actions">
             <a href="#contact" class="btn btn-primary">Κλείσε συνεδρία</a>
-            <button class="btn btn-ghost" type="button">
-              Δες τις υπηρεσίες
-            </button>
+            <a href="#studio" class="btn btn-ghost">Δες τον χώρο</a>
           </div>
+
           <div class="hero-meta">
-            <div>
-              <span class="meta-label">+10 χρόνια</span>
-              <span class="meta-text">Εμπειρία στο μασάζ</span>
-            </div>
             <div>
               <span class="meta-label">4.9/5</span>
               <span class="meta-text">Αξιολογήσεις πελατών</span>
+            </div>
+            <div>
+              <span class="meta-label">11 χρόνια</span>
+              <span class="meta-text">Εμπειρία στο μασάζ</span>
             </div>
           </div>
         </div>
 
         <div class="hero-visual">
-          <div class="hero-blob"></div>
-          <div class="hero-card">
-            <div class="hero-image">
-              <img src="assets/hero-massage.jpg" alt="Κρεβάτι μασάζ με ζεστό φωτισμό">
-            </div>
-            <div class="hero-tag">
-              <p>“Το μόνο ραντεβού που δεν ακυρώνω ποτέ.”</p>
-              <span>Μ. · 34 ετών</span>
+          <div class="hero-photo-frame">
+            <span class="hero-vertical-label">Boutique Massage · Αθήνα</span>
+            <div class="hero-photo">
+              <img src="assets/hero-massage.jpg" alt="Minimal δωμάτιο μασάζ με ουδέτερα χρώματα">
             </div>
           </div>
 
-          <div class="hero-slot">
-            <p class="slot-label">Διαθεσιμότητα σήμερα</p>
-            <p class="slot-times">18:30 · 20:00</p>
-            <p class="slot-note">Ενδεικτικό UI για portfolio demo</p>
+          <div class="hero-session-card">
+            <p class="session-title">Επόμενη ελεύθερη ώρα</p>
+            <p class="session-time">Σήμερα · 19:00</p>
+            <p class="session-note">UI στοιχείο για portfolio · δεν είναι live κράτηση</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- STRIP: WHEN YOU BOOK -->
+    <!-- STRIP: WHEN YOU COME -->
     <section class="strip">
       <div class="container strip-inner">
-        <div class="strip-item">
-          <span class="dot"></span>
-          <p>Όταν νιώθεις πιάσιμο σε αυχένα & μέση</p>
-        </div>
-        <div class="strip-item">
-          <span class="dot"></span>
-          <p>Όταν το άγχος “μένει” στο σώμα σου</p>
-        </div>
-        <div class="strip-item">
-          <span class="dot"></span>
-          <p>Όταν θες μια ήρεμη ώρα χωρίς οθόνες</p>
+        <span>Έρχεσαι όταν…</span>
+        <div class="strip-tags">
+          <span class="tag-pill">ο αυχένας “κλειδώνει”</span>
+          <span class="tag-pill">το άγχος μένει στο σώμα</span>
+          <span class="tag-pill">θέλεις μία ώρα χωρίς ειδοποιήσεις</span>
         </div>
       </div>
     </section>
@@ -112,168 +99,132 @@
       <div class="container">
         <div class="section-header">
           <p class="eyebrow">ΥΠΗΡΕΣΙΕΣ</p>
-          <h2>Τρεις βασικοί τύποι μασάζ, άπειροι τρόποι να νιώσεις καλύτερα.</h2>
-          <p class="section-subtitle">
-            Οι συνεδρίες ξεκινούν με μια σύντομη συζήτηση ώστε να προσαρμόσουμε
-            την πίεση, το tempo και την εστίαση στα σημεία που σε απασχολούν.
-          </p>
+          <h2>Τρεις καθαρές επιλογές, με χώρο να προσαρμόσουμε τα πάντα πάνω σου.</h2>
         </div>
 
         <div class="services-grid">
-          <article class="service-card">
-            <span class="service-icon">01</span>
-            <h3>Θεραπευτικό Μασάζ Σώματος</h3>
-            <p>
-              Για ένταση σε αυχένα, μέση, ώμους. Συνδυασμός τεχνικών deep tissue
-              & μυοπεριτονιακής απελευθέρωσης.
-            </p>
-            <ul>
-              <li>45′ ή 60′</li>
-              <li>Ιδανικό για δουλειά γραφείου</li>
-              <li>Εστίαση εκεί που “κρατάς” ένταση</li>
-            </ul>
+          <article class="service-row">
+            <div class="service-line"></div>
+            <div class="service-content">
+              <div class="service-head">
+                <span class="service-index">01</span>
+                <h3>Θεραπευτικό Μασάζ Σώματος</h3>
+              </div>
+              <p>
+                Για αυχένα, μέση, ώμους. Ρυθμικό, σταθερό touch με συνδυασμό
+                deep tissue & μυοπεριτονιακών τεχνικών.
+              </p>
+              <div class="service-meta-row">
+                <span>45′ ή 60′</span>
+                <span>ιδανικό για δουλειά γραφείου</span>
+              </div>
+            </div>
           </article>
 
-          <article class="service-card">
-            <span class="service-icon">02</span>
-            <h3>Calm & Aromatherapy Ritual</h3>
-            <p>
-              Απαλές, ρυθμικές κινήσεις με ζεστό λάδι και προσεκτικά επιλεγμένα
-              αιθέρια έλαια για ύπνο & αποφόρτιση.
-            </p>
-            <ul>
-              <li>60′ συνεδρία</li>
-              <li>Ήπιος φωτισμός & μουσική</li>
-              <li>Ιδανικό μετά από απαιτητική ημέρα</li>
-            </ul>
+          <article class="service-row">
+            <div class="service-line"></div>
+            <div class="service-content">
+              <div class="service-head">
+                <span class="service-index">02</span>
+                <h3>Soft Calm Ritual</h3>
+              </div>
+              <p>
+                Χαλαρωτικό μασάζ με ζεστό λάδι, αργό tempo και ήπια αρωματοθεραπεία.
+                Πιο κοντά σε τελετουργικό ηρεμίας παρά σε “θεραπεία”.
+              </p>
+              <div class="service-meta-row">
+                <span>60′</span>
+                <span>με έμφαση σε ύπνο & άγχος</span>
+              </div>
+            </div>
           </article>
 
-          <article class="service-card">
-            <span class="service-icon">03</span>
-            <h3>Αθλητικό Μασάζ & Recovery</h3>
-            <p>
-              Για δρομείς, cross-training & gym. Βοηθά στην αποκατάσταση και την
-              πρόληψη τραυματισμών.
-            </p>
-            <ul>
-              <li>45′ ή 75′</li>
-              <li>Πόδια, γλουτοί, πλάτη</li>
-              <li>Γρήγορο tempo & βαθύτερη πίεση</li>
-            </ul>
+          <article class="service-row">
+            <div class="service-line"></div>
+            <div class="service-content">
+              <div class="service-head">
+                <span class="service-index">03</span>
+                <h3>Αθλητικό & Recovery</h3>
+              </div>
+              <p>
+                Για προπόνηση, τρέξιμο, αγώνες. Πιο δυναμικό, πιο στοχευμένο,
+                με ξεκάθαρη εστίαση σε πόδια & πλάτη.
+              </p>
+              <div class="service-meta-row">
+                <span>45′ ή 75′</span>
+                <span>run / gym / cross-training</span>
+              </div>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ABOUT -->
-    <section id="about" class="section about">
-      <div class="container about-inner">
-        <div class="about-media">
-          <div class="about-image">
-            <img src="assets/about-massage.jpg" alt="Θεραπεύτρια μασάζ σε ήρεμο χώρο">
-          </div>
-          <div class="about-stamp">
-            <p>Certified Massage Therapist</p>
-            <span>Holistic · Therapeutic · Relax</span>
-          </div>
-        </div>
-
-        <div class="about-copy">
-          <p class="eyebrow">ΣΧΕΤΙΚΑ ΜΕ ΤΟ LÚMEN</p>
-          <h2>Ένα μικρό studio στο κέντρο της πόλης, σχεδιασμένο να σου κατεβάζει ρυθμούς.</h2>
+    <!-- STORY -->
+    <section id="story" class="section story">
+      <div class="container story-inner">
+        <div class="story-text">
+          <p class="eyebrow">Η ΙΣΤΟΡΙΑ</p>
+          <h2>Όχι άλλο “γρήγορο μασάζ”. Ένα δωμάτιο που θυμάται το σώμα σου.</h2>
           <p>
-            Το Lúmen είναι ένα μικρό, ήσυχο massage studio στην Αθήνα.
-            Χωρίς φασαρία, χωρίς ουρές, χωρίς “βιομηχανική” αίσθηση.
+            Το Linea ξεκίνησε από την ανάγκη για έναν χώρο που δεν σε βιάζει.
+            Κλείνεις ώρα, μπαίνεις, κλείνει η πόρτα. Δεν υπάρχει μουσική
+            ξενοδοχείου, ούτε έντονα αρώματα. Μόνο ένα κρεβάτι, ζεστό φως
+            και κάποιος που σε ακούει.
           </p>
           <p>
-            Δουλεύουμε μόνο με ραντεβού, με απόλυτο σεβασμό στην ιδιωτικότητα, την
-            καθαριότητα και τα προσωπικά σου όρια.
+            Πριν ξεκινήσουμε, μιλάμε 3–5 λεπτά για το τι σε απασχολεί.
+            Μετά, προσαρμόζουμε πίεση, tempo και εστίαση ώστε να βγει
+            η συνεδρία πραγματικά δική σου.
           </p>
 
-          <div class="about-pills">
-            <span class="pill">Ένας πελάτης τη φορά</span>
-            <span class="pill">Φυσικά έλαια & υλικά</span>
-            <span class="pill">Ήπια, ουδέτερη παλέτα στον χώρο</span>
-          </div>
-
-          <div class="about-inline">
+          <div class="story-details">
             <div>
-              <p class="label">Περιοχή</p>
+              <span class="label">Τόπος</span>
               <p>Κέντρο Αθήνας (ενδεικτικά)</p>
             </div>
             <div>
-              <p class="label">Τηλέφωνο</p>
-              <a href="tel:+302100000000">+30 210 000 0000</a>
+              <span class="label">Τρόπος</span>
+              <p>Μόνο με ραντεβού · ένας άνθρωπος κάθε φορά</p>
             </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- RITUAL / EXPERIENCE -->
-    <section id="ritual" class="section ritual">
-      <div class="container">
-        <div class="section-header">
-          <p class="eyebrow">Η ΕΜΠΕΙΡΙΑ</p>
-          <h2>Από την πρώτη ανάσα μέχρι το “σε ευχαριστώ”.</h2>
-          <p class="section-subtitle">
-            Σκεφτόμαστε την κάθε συνεδρία σαν μια μικρή ιστορία: έρχεσαι
-            φορτωμένος, φεύγεις λίγο πιο ανάλαφρος.
+        <div class="story-card">
+          <div class="story-tag">Note για portfolio</div>
+          <p>
+            Το κείμενο, το layout και το ύφος είναι demo. Στο πραγματικό project
+            μπορείς να προσαρμόσεις τα πάντα πάνω στον/στην θεραπευτή/τρια
+            που θα συνεργαστείς.
           </p>
         </div>
-
-        <div class="ritual-steps">
-          <article class="ritual-step">
-            <span class="step-number">1</span>
-            <h3>Σύντομη συζήτηση</h3>
-            <p>
-              Πριν ξαπλώσεις, μιλάμε 3–5 λεπτά για ό,τι σε απασχολεί
-              στο σώμα ή στο πρόγραμμα σου.
-            </p>
-          </article>
-
-          <article class="ritual-step">
-            <span class="step-number">2</span>
-            <h3>Προσαρμοσμένη συνεδρία</h3>
-            <p>
-              Ρυθμίζουμε πίεση, tempo, τεχνικές και επικοινωνούμε διακριτικά
-              αν κάτι χρειάζεται αλλαγή.
-            </p>
-          </article>
-
-          <article class="ritual-step">
-            <span class="step-number">3</span>
-            <h3>Μικρή “γέφυρα” μετά</h3>
-            <p>
-              2–3 λεπτά για νερό, αναπνοή & απλές προτάσεις για το πώς να
-              συνεχίσεις τη μέρα σου πιο ήρεμα.
-            </p>
-          </article>
-        </div>
       </div>
     </section>
 
-    <!-- GALLERY -->
-    <section id="gallery" class="section gallery">
+    <!-- STUDIO / SPACE -->
+    <section id="studio" class="section studio">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header studio-header">
           <p class="eyebrow">Ο ΧΩΡΟΣ</p>
-          <h2>Ήρεμα χρώματα, μαλακό φως, καθαρές γραμμές.</h2>
-          <p class="section-subtitle">
-            Ενδεικτικές φωτογραφίες για να δείξεις σε έναν μελλοντικό πελάτη
-            πώς θα μπορούσε να παρουσιαστεί το studio του.
+          <h2>Ένα δωμάτιο, τρεις γωνιές.</h2>
+          <p class="studio-subtitle">
+            Στο portfolio μπορείς να δείξεις 2–3 χαρακτηριστικές λήψεις:
+            το κρεβάτι, τη γωνιά αναμονής και μια κοντινή λεπτομέρεια.
           </p>
         </div>
 
-        <div class="gallery-grid">
-          <figure class="gallery-item gallery-item-large">
-            <img src="assets/room-1.jpg" alt="Κρεβάτι μασάζ σε minimal χώρο">
+        <div class="studio-grid">
+          <figure class="studio-item studio-main">
+            <img src="assets/studio-main.jpg" alt="Κρεβάτι μασάζ σε καθαρό, minimal χώρο">
+            <figcaption>Το κρεβάτι · ουδέτερα χρώματα, χωρίς οπτικό θόρυβο.</figcaption>
           </figure>
-          <figure class="gallery-item">
-            <img src="assets/room-2.jpg" alt="Μικρή γωνιά αναμονής με φυτά">
+          <figure class="studio-item">
+            <img src="assets/studio-corner.jpg" alt="Γωνιά αναμονής με καρέκλα και φυτό">
+            <figcaption>Μικρή γωνιά πριν & μετά τη συνεδρία.</figcaption>
           </figure>
-          <figure class="gallery-item">
-            <img src="assets/detail-1.jpg" alt="Λεπτομέρεια από πετσέτες και λάδια μασάζ">
+          <figure class="studio-item">
+            <img src="assets/studio-detail.jpg" alt="Λεπτομέρεια με πετσέτες και λάδι μασάζ">
+            <figcaption>Λεπτομέρειες που δείχνουν καθαριότητα & φροντίδα.</figcaption>
           </figure>
         </div>
       </div>
@@ -284,95 +235,42 @@
       <div class="container">
         <div class="section-header">
           <p class="eyebrow">ΤΙΜΕΣ</p>
-          <h2>Καθαρή, απλή τιμολόγηση χωρίς εκπλήξεις.</h2>
-          <p class="section-subtitle">
-            Ενδεικτικό layout για παρουσίαση τιμών. Στο πραγματικό project
-            μπορείς να προσαρμόσεις ποσά & πακέτα.
-          </p>
+          <h2>Καθαρή, απλή τιμολόγηση χωρίς μικρά γράμματα.</h2>
         </div>
 
-        <div class="pricing-grid">
-          <article class="pricing-card">
-            <h3>Single Session</h3>
-            <p class="price">€60</p>
-            <p class="duration">60′ θεραπευτικό ή relax</p>
-            <ul>
-              <li>Εστίαση στα σημεία που σε απασχολούν</li>
-              <li>Σύντομη συζήτηση πριν & μετά</li>
-              <li>Χωρίς δέσμευση πακέτου</li>
-            </ul>
-            <a href="#contact" class="btn btn-outline full-width">Κλείσε ραντεβού</a>
-          </article>
-
-          <article class="pricing-card pricing-card-featured">
-            <span class="pill pill-accent">Πιο δημοφιλές</span>
-            <h3>Monthly Reset</h3>
-            <p class="price">€210</p>
-            <p class="duration">4 συνεδρίες x 60′</p>
-            <ul>
-              <li>Σταθερό slot κάθε μήνα</li>
-              <li>Προτεραιότητα σε βραδινές ώρες</li>
-              <li>Μικρές προτάσεις self-care ανά συνεδρία</li>
-            </ul>
-            <a href="#contact" class="btn btn-primary full-width">Ζήτα διαθεσιμότητα</a>
-          </article>
-
-          <article class="pricing-card">
-            <h3>Sport Pack</h3>
-            <p class="price">€320</p>
-            <p class="duration">8 συνεδρίες x 45′</p>
-            <ul>
-              <li>Ιδανικό για έντονη προπόνηση</li>
-              <li>Πριν & μετά από αγώνες ή events</li>
-              <li>Βασικές οδηγίες για recovery</li>
-            </ul>
-            <a href="#contact" class="btn btn-outline full-width">Μάθε περισσότερα</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- TESTIMONIALS -->
-    <section class="section testimonials">
-      <div class="container">
-        <div class="section-header">
-          <p class="eyebrow">ΤΙ ΛΕΝΕ ΟΙ ΠΕΛΑΤΕΣ</p>
-          <h2>“Ένα μικρό στούντιο που νιώθεις ότι σε θυμάται.”</h2>
-        </div>
-
-        <div class="testimonials-grid">
-          <article class="testimonial-card">
-            <p class="testimonial-text">
-              “Εδώ νιώθω ότι κάποιος μου δίνει χρόνο. Δεν είναι ‘μπες-βγες’.
-              Φεύγω πάντα πιο ήρεμη από όταν μπήκα.”
+        <div class="pricing-layout">
+          <article class="pricing-note">
+            <p>
+              Η ενότητα τιμών είναι ενδεικτική. Πιο σημαντικό από τα νούμερα,
+              είναι η αίσθηση ότι ο πελάτης καταλαβαίνει τι περιλαμβάνει
+              κάθε συνεδρία.
             </p>
-            <p class="testimonial-name">Σοφία, 36</p>
-            <span class="testimonial-tag">Calm & Aromatherapy</span>
           </article>
 
-          <article class="testimonial-card">
-            <p class="testimonial-text">
-              “Μετά από μαραθώνιο ή δυνατές προπονήσεις, το σώμα μου κρασάρει.
-              Το αθλητικό μασάζ εδώ είναι μέρος της προπόνησης μου.”
-            </p>
-            <p class="testimonial-name">Νίκος, 41</p>
-            <span class="testimonial-tag">Αθλητικό Μασάζ</span>
-          </article>
-        </div>
-      </div>
-    </section>
+          <div class="pricing-cards">
+            <article class="pricing-card">
+              <h3>Single Session</h3>
+              <p class="price">€60</p>
+              <p class="duration">60′ · οποιοσδήποτε τύπος μασάζ</p>
+              <ul>
+                <li>Σύντομη συζήτηση πριν & μετά</li>
+                <li>Εστίαση στα σημεία που σε απασχολούν</li>
+                <li>Χωρίς δέσμευση πακέτου</li>
+              </ul>
+            </article>
 
-    <!-- CONTACT CTA -->
-    <section class="section contact-cta">
-      <div class="container contact-cta-inner">
-        <div>
-          <p class="eyebrow">ΕΠΟΜΕΝΟ ΒΗΜΑ</p>
-          <h2>Κράτησε μια ήσυχη ώρα στο calendar σου.</h2>
-          <p>Γράψε μας πότε σε βολεύει και θα σου απαντήσουμε με τις διαθέσιμες επιλογές.</p>
-        </div>
-        <div class="contact-cta-actions">
-          <a href="#contact" class="btn btn-primary">Φόρμα επικοινωνίας</a>
-          <a href="tel:+302100000000" class="btn btn-ghost">Τηλεφωνική κράτηση</a>
+            <article class="pricing-card pricing-card-accent">
+              <div class="pill">Για όσους θέλουν ρυθμό</div>
+              <h3>Monthly Line</h3>
+              <p class="price">€210</p>
+              <p class="duration">4 συνεδρίες x 60′</p>
+              <ul>
+                <li>Σταθερή ώρα κάθε μήνα</li>
+                <li>Ελαφρώς μειωμένη τιμή ανά συνεδρία</li>
+                <li>Ιδανικό για “συντήρηση” σώματος & νου</li>
+              </ul>
+            </article>
+          </div>
         </div>
       </div>
     </section>
@@ -380,26 +278,22 @@
     <!-- CONTACT -->
     <section id="contact" class="section contact">
       <div class="container contact-inner">
-        <div class="contact-info">
+        <div class="contact-text">
           <p class="eyebrow">ΕΠΙΚΟΙΝΩΝΙΑ</p>
-          <h2>Πες μας λίγα λόγια για σένα.</h2>
-          <p class="section-subtitle">
-            Η φόρμα είναι ενδεικτική για το portfolio σου. Στο πραγματικό site
-            μπορεί να συνδεθεί με email, CRM ή online booking.
+          <h2>Στείλε ένα μήνυμα σαν να μιλάς σε άνθρωπο, όχι σε φόρμα.</h2>
+          <p class="contact-subtitle">
+            Η φόρμα που βλέπεις είναι demo. Στο πραγματικό site μπορεί να
+            συνδεθεί με email, online booking ή WhatsApp.
           </p>
 
           <div class="contact-details">
             <div>
-              <p class="label">Τηλέφωνο</p>
+              <span class="label">Τηλέφωνο</span>
               <a href="tel:+302100000000">+30 210 000 0000</a>
             </div>
             <div>
-              <p class="label">Email</p>
-              <a href="mailto:hello@lumenstudio.demo">hello@lumenstudio.demo</a>
-            </div>
-            <div>
-              <p class="label">Διεύθυνση</p>
-              <p>Κέντρο Αθήνας (ενδεικτικά)</p>
+              <span class="label">Email</span>
+              <a href="mailto:hello@linea.demo">hello@linea.demo</a>
             </div>
           </div>
         </div>
@@ -407,33 +301,24 @@
         <div class="contact-form-wrapper">
           <form class="contact-form">
             <div class="field">
-              <label for="name">Ονοματεπώνυμο</label>
-              <input id="name" name="name" type="text" placeholder="Πώς σε λένε;">
+              <label for="name">Όνομα</label>
+              <input id="name" name="name" type="text" placeholder="Πώς να σε φωνάζουμε;">
             </div>
             <div class="field">
               <label for="email">Email</label>
               <input id="email" name="email" type="email" placeholder="you@example.com">
             </div>
-            <div class="field">
-              <label for="service">Τύπος μασάζ</label>
-              <select id="service" name="service">
-                <option>Θεραπευτικό</option>
-                <option>Calm & Aromatherapy</option>
-                <option>Αθλητικό / Recovery</option>
-                <option>Δεν είμαι σίγουρος/η</option>
-              </select>
-            </div>
             <div class="field field-inline">
               <div>
-                <label for="day">Προτιμώ</label>
+                <label for="day">Προτιμώ ημέρα</label>
                 <select id="day" name="day">
                   <option>Καθημερινή</option>
-                  <option>Σαββατοκύριακο</option>
-                  <option>Οποιαδήποτε μέρα</option>
+                  <option>Σάββατο</option>
+                  <option>Οποιαδήποτε</option>
                 </select>
               </div>
               <div>
-                <label for="time">Ώρα</label>
+                <label for="time">Προτιμώ ώρα</label>
                 <select id="time" name="time">
                   <option>Πρωί</option>
                   <option>Απόγευμα</option>
@@ -443,13 +328,13 @@
             </div>
             <div class="field">
               <label for="message">Μήνυμα</label>
-              <textarea id="message" name="message" rows="4" placeholder="Πες μας αν υπάρχει κάτι συγκεκριμένο που σε απασχολεί."></textarea>
+              <textarea id="message" name="message" rows="4" placeholder="Πες μας, πού νιώθεις περισσότερο ένταση;"></textarea>
             </div>
             <button type="submit" class="btn btn-primary full-width">
-              Αποστολή (Demo)
+              Αποστολή (demo)
             </button>
             <p class="form-note">
-              * Η φόρμα δεν αποστέλλει πραγματικά δεδομένα · demo layout για portfolio.
+              Η φόρμα δεν αποστέλλει πραγματικά δεδομένα · είναι μόνο για το portfolio σου.
             </p>
           </form>
         </div>
@@ -460,17 +345,13 @@
   <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div class="footer-left">
-        <p class="footer-logo">Lúmen Massage Studio</p>
-        <p class="footer-text">
-          Το συγκεκριμένο website είναι demo project για το προσωπικό portfolio
-          web design & development και δεν ανήκει σε πραγματική επιχείρηση.
-        </p>
-      </div>
-      <div class="footer-right">
-        <p class="footer-meta">Design & code by <span>Evida Studio</span></p>
-        <p class="footer-meta small">© 2025 · Demo only · All rights reserved.</p>
-      </div>
+      <p class="footer-left">
+        Linea Massage Room · demo website για το προσωπικό portfolio web design & development.
+        Δεν ανήκει σε πραγματική επιχείρηση.
+      </p>
+      <p class="footer-right">
+        Design & code by <span>Evida Studio</span> · 2025
+      </p>
     </div>
   </footer>
 </body>
